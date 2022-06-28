@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_foodly/ui/sign_view.dart';
+import 'package:flutter_foodly/ui/sign_in_view.dart';
 
 void main() {
   runApp(const MyApp());

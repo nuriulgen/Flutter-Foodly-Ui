@@ -7,6 +7,7 @@ class AppStringConstants {
 
   AppStringConstants._init();
   final String pageViewButtonTitle = 'Get Started';
+
   final String signInAppBarTitle = 'Sign In';
   final String signInTitle = 'Welcome';
   final String signInSubTitle =
@@ -14,6 +15,9 @@ class AppStringConstants {
   final String signInButtonTitle = 'Create new account';
   final String signInEmailForm = 'Email';
   final String signInPasswordForm = 'Password';
+  final String signInTextButton = 'Forgot Password';
+  final String signInFacebookButton = 'Connect With Facebook';
+  final String signInGoogleButton = 'Connect With Google';
 }
 
 class LanguageItems {
