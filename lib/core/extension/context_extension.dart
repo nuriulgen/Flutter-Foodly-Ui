@@ -18,6 +18,7 @@ extension ContextExtension on BuildContext {
   EdgeInsets get padding3xOnlyTop => const EdgeInsets.only(top: 30);
   EdgeInsets get padding5xOnlyTop => const EdgeInsets.only(top: 50);
   EdgeInsets get padding2xOnlyLeft => const EdgeInsets.only(left: 20);
+  EdgeInsets get padding2xOnlyBottom => const EdgeInsets.only(bottom: 20);
   EdgeInsets get padding8xOnlyBottom => const EdgeInsets.only(bottom: 80);
 
   // HEIGHT- WIDTH
