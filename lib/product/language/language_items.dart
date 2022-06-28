@@ -12,6 +12,8 @@ class AppStringConstants {
   final String signInSubTitle =
       'Enter your Phone number or Email for sign in, Or ';
   final String signInButtonTitle = 'Create new account';
+  final String signInEmailForm = 'Email';
+  final String signInPasswordForm = 'Password';
 }
 
 class LanguageItems {

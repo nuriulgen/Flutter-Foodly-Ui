@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import '../color/color_items.dart';
 
-class SubTitleButtonWidget extends StatelessWidget {
-  SubTitleButtonWidget({
+class CustomRichText extends StatelessWidget {
+  CustomRichText({
     Key? key,
     required this.title,
     this.onPressed,
