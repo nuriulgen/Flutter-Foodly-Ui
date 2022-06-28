@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_foodly/ui/walk_through.view.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_foodly/ui/sign_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,10 +18,11 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.transparent,
           elevation: 0,
+          systemOverlayStyle: SystemUiOverlayStyle.dark,
         ),
         scaffoldBackgroundColor: const Color(0xFFFFFFFF),
       ),
-      home: const WalkThroughView(),
+      home: const SignInView(),
     );
   }
 }

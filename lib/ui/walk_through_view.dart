@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_foodly/core/extension/context_extension.dart';
+import 'package:flutter_foodly/ui/sign_view.dart';
 
 import '../core/constants/image/image_constants.dart';
 import '../product/color/color_items.dart';
@@ -53,23 +54,26 @@ class _WalkThroughViewState extends State<WalkThroughView> {
         itemBuilder: (BuildContext context, int index) {
           return Column(
             children: [
-              PngImage(name: images[index]),
+              _imageWidget(context, index),
               Padding(
-                padding: context.pot50,
+                padding: context.padding5xOnlyTop,
                 child: _titleWidget(index, context),
               ),
               Padding(
-                padding: context.ph50 + context.pv10,
+                padding: context.padding5xHorizontal + context.paddingXVertical,
                 child: _subTitleWidget(index, context),
               ),
               Padding(
-                padding: context.ph170 + context.pv20,
+                padding:
+                    context.padding17xHorizontal + context.padding2xVertical,
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: indicators(images.length, activePage)),
               ),
               Padding(
-                padding: context.ph20 + context.pob60,
+                padding: context.padding2xHorizontal +
+                    context.padding8xOnlyBottom +
+                    context.padding3xOnlyTop,
                 child: _buttonWidget(context),
               ),
             ],
@@ -80,12 +84,24 @@ class _WalkThroughViewState extends State<WalkThroughView> {
     );
   }
 
+  SizedBox _imageWidget(BuildContext context, int index) {
+    return SizedBox(
+        height: context.hw340,
+        width: context.hw340,
+        child: PngImage(name: images[index]));
+  }
+
   SizedBox _buttonWidget(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: CustomElevatedButton(
         title: appStringConstants!.pageViewButtonTitle,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+                builder: (BuildContext context) => const SignInView()),
+          );
+        },
       ),
     );
   }
@@ -97,29 +113,43 @@ class _WalkThroughViewState extends State<WalkThroughView> {
       style: Theme.of(context)
           .textTheme
           .subtitle2
-          ?.copyWith(color: colorItems.bodyTextColor),
+          ?.copyWith(color: colorItems.bodyColor),
     );
   }
 
   Text _titleWidget(int index, BuildContext context) {
     return Text(
       titles[index],
-      style: Theme.of(context).textTheme.headline5?.copyWith(
-          color: colorItems.mainTextColor, fontWeight: FontWeight.bold),
+      style: Theme.of(context)
+          .textTheme
+          .headline5
+          ?.copyWith(color: colorItems.mainColor, fontWeight: FontWeight.bold),
     );
   }
 }
 
 List<Widget> indicators(imagesLength, currentIndex) {
+  ColorItems colorItems = ColorItems();
   return List<Widget>.generate(imagesLength, (index) {
     return Container(
-      margin: const EdgeInsets.all(5),
-      width: 10,
-      height: 5,
+      margin: ProjectMargin.smalllMargin,
+      width: ProjectHeightWidgetValue.normal2xHeightItems,
+      height: ProjectHeightWidgetValue.normalHeightItems,
       decoration: BoxDecoration(
-          color:
-              currentIndex == index ? const Color(0xFF22A45D) : Colors.black26,
-          shape: BoxShape.rectangle),
+        color: currentIndex == index
+            ? colorItems.activeColor
+            : colorItems.indicatorColor,
+        shape: BoxShape.rectangle,
+      ),
     );
   });
+}
+
+class ProjectMargin {
+  static const EdgeInsets smalllMargin = EdgeInsets.all(5);
+}
+
+class ProjectHeightWidgetValue {
+  static const double normalHeightItems = 5;
+  static const double normal2xHeightItems = 10;
 }

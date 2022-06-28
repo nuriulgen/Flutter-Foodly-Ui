@@ -18,7 +18,7 @@ class CustomElevatedButton extends StatelessWidget {
                 borderRadius: BorderRadius.circular(context.hw5))),
         onPressed: onPressed,
         child: Padding(
-          padding: context.p20,
+          padding: context.padding2xGeneral,
           child: Text(
             title,
             style: Theme.of(context).textTheme.subtitle2?.copyWith(
