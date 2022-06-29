@@ -22,12 +22,25 @@ class AppStringConstants {
   final String signUpAppBarTitle = 'Sign Up';
   final String signUpTitle = 'Create account';
   final String signUpSubTitle =
-      'Enter your Name, Email and Password for sign up.';
+      'Enter your Name, Email and Password for sign up. ';
   final String signUpButtonTitle = 'Already have an account?';
   final String signUpNameForm = 'Full Name';
   final String signUpElevatedButton = 'Sign Up';
   final String signUpMessage =
       'By Signing up you agree to our Terms Conditions & Privacy Policy.';
+
+  final String forgotPasswordAppBarTitle = 'Forgot Password';
+  final String forgotPasswordTitle = 'Forgot password';
+  final String forgotPasswordSubTitle =
+      'Enter your email address and we will send you a reset instructions. ';
+  final String forgotPasswordButtonTitle = 'Reset Password';
+  final String forgotEmailForm = 'Email Address';
+
+  final String emailResetTitle = 'Reset email sent';
+  final String emailResetSubTitle =
+      'We have sent a instructions email to nuriulgen@gmail.com. ';
+  final String emailResetButtonTitle = 'Having problem? ';
+  final String emailElevatedButton = 'Send Again';
 }
 
 class LanguageItems {

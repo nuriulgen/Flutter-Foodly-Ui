@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_foodly/core/extension/context_extension.dart';
-import 'package:flutter_foodly/ui/sign_in_view.dart';
+import 'package:flutter_foodly/ui/authentication/sign_in_view.dart';
 
 import '../core/constants/image/image_constants.dart';
 import '../product/color/color_items.dart';

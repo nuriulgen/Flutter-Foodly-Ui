@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_foodly/core/extension/context_extension.dart';
-import 'package:flutter_foodly/ui/sign_in_view.dart';
+import 'package:flutter_foodly/ui/authentication/sign_in_view.dart';
 
-import '../product/color/color_items.dart';
-import '../product/language/language_items.dart';
-import '../product/widget/custom_app_bar_widget.dart';
-import '../product/widget/custom_elevated_button.dart';
-import '../product/widget/subTitle_widget.dart';
-import '../product/widget/text_field_widget.dart';
-import '../product/widget/title_widget.dart';
+import '../../product/color/color_items.dart';
+import '../../product/language/language_items.dart';
+import '../../product/widget/custom_app_bar_widget.dart';
+import '../../product/widget/custom_elevated_button.dart';
+import '../../product/widget/subTitle_widget.dart';
+import '../../product/widget/text_field_widget.dart';
+import '../../product/widget/title_widget.dart';
 
 class SignUpView extends StatefulWidget {
   const SignUpView({Key? key}) : super(key: key);

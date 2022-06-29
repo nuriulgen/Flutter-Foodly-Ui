@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_foodly/core/extension/context_extension.dart';
-import 'package:flutter_foodly/ui/sign_up_view.dart';
+import 'package:flutter_foodly/ui/authentication/sign_up_view.dart';
 
-import '../product/color/color_items.dart';
-import '../product/language/language_items.dart';
-import '../product/widget/custom_app_bar_widget.dart';
-import '../product/widget/custom_elevated_button.dart';
-import '../product/widget/custom_text_button.dart';
-import '../product/widget/subTitle_widget.dart';
-import '../product/widget/text_field_widget.dart';
-import '../product/widget/title_widget.dart';
+import '../../product/color/color_items.dart';
+import '../../product/language/language_items.dart';
+import '../../product/widget/custom_app_bar_widget.dart';
+import '../../product/widget/custom_elevated_button.dart';
+import '../../product/widget/custom_text_button.dart';
+import '../../product/widget/subTitle_widget.dart';
+import '../../product/widget/text_field_widget.dart';
+import '../../product/widget/title_widget.dart';
+import 'forgot_password_view.dart';
 
 class SignInView extends StatefulWidget {
   const SignInView({Key? key}) : super(key: key);
@@ -115,7 +116,14 @@ class _SignInViewState extends State<SignInView> {
             .textTheme
             .button
             ?.copyWith(color: colorItems.bodyColor),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const ForgotPasswordView(),
+            ),
+          );
+        },
       ),
     );
   }

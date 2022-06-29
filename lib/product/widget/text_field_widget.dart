@@ -7,11 +7,13 @@ class CustomTextField extends StatefulWidget {
       {Key? key,
       required this.hintText,
       this.textInputType,
-      this.textInputAction})
+      this.textInputAction,
+      this.inputBorder})
       : super(key: key);
   final String hintText;
   final TextInputType? textInputType;
   final TextInputAction? textInputAction;
+  final InputBorder? inputBorder;
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
 }
@@ -24,9 +26,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
       keyboardType: widget.textInputType,
       textInputAction: widget.textInputAction,
       decoration: InputDecoration(
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-        ),
+        border: widget.inputBorder ??
+            OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
         fillColor: colorItems.inputColor,
         filled: true,
         hintText: widget.hintText,
