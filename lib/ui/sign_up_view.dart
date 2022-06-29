@@ -1,56 +1,57 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_foodly/core/extension/context_extension.dart';
-import 'package:flutter_foodly/ui/sign_up_view.dart';
+import 'package:flutter_foodly/ui/sign_in_view.dart';
 
 import '../product/color/color_items.dart';
 import '../product/language/language_items.dart';
 import '../product/widget/custom_app_bar_widget.dart';
 import '../product/widget/custom_elevated_button.dart';
-import '../product/widget/custom_text_button.dart';
 import '../product/widget/subTitle_widget.dart';
 import '../product/widget/text_field_widget.dart';
 import '../product/widget/title_widget.dart';
 
-class SignInView extends StatefulWidget {
-  const SignInView({Key? key}) : super(key: key);
+class SignUpView extends StatefulWidget {
+  const SignUpView({Key? key}) : super(key: key);
 
   @override
-  State<SignInView> createState() => _SignInViewState();
+  State<SignUpView> createState() => _SignUpViewState();
 }
 
-class _SignInViewState extends State<SignInView> {
+class _SignUpViewState extends State<SignUpView> {
   AppStringConstants? appStringConstants = AppStringConstants.instance;
   ColorItems colorItems = ColorItems();
   final String text = 'Or';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: appStringConstants!.signInAppBarTitle),
+      appBar: CustomAppBar(title: appStringConstants!.signUpAppBarTitle),
       body: Padding(
         padding: context.padding2xHorizontal,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: context.padding2xVertical,
+              padding: context.paddingXVertical,
               child: _titleWidget(context),
             ),
             _subTitleWidget(context),
             SizedBox(height: context.hw30),
+            _nameTextFieldWidget(),
+            SizedBox(height: context.hw10),
             _emailTextFieldWidget(),
             SizedBox(height: context.hw10),
             _passwordTextFieldWidget(),
             Padding(
-              padding: context.paddingXVertical,
-              child: _textButtonWidget(context),
-            ),
-            Padding(
-              padding: context.padding2xOnlyBottom,
-              child: _signInButtonWidget(context),
-            ),
-            _textWidget(context),
-            Padding(
               padding: context.padding2xVertical,
+              child: _signUpButtonWidget(context),
+            ),
+            _messageText(context),
+            Padding(
+              padding: context.paddingXVertical,
+              child: _textWidget(context),
+            ),
+            Padding(
+              padding: context.paddingXVertical,
               child: _facebookButtonWidget(context),
             ),
             Padding(
@@ -60,6 +61,30 @@ class _SignInViewState extends State<SignInView> {
           ],
         ),
       ),
+    );
+  }
+
+  Center _messageText(BuildContext context) {
+    return Center(
+      child: SizedBox(
+        width: context.hw285,
+        height: context.hw45,
+        child: Text(
+          appStringConstants!.signUpMessage,
+          textAlign: TextAlign.center,
+          style: Theme.of(context)
+              .textTheme
+              .subtitle1
+              ?.copyWith(color: colorItems.bodyColor),
+        ),
+      ),
+    );
+  }
+
+  CustomTextField _nameTextFieldWidget() {
+    return CustomTextField(
+      hintText: appStringConstants!.signUpNameForm,
+      textInputAction: TextInputAction.next,
     );
   }
 
@@ -96,25 +121,12 @@ class _SignInViewState extends State<SignInView> {
     ));
   }
 
-  SizedBox _signInButtonWidget(BuildContext context) {
+  SizedBox _signUpButtonWidget(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: CustomElevatedButton(
-        title: appStringConstants!.signInAppBarTitle,
+        title: appStringConstants!.signUpElevatedButton,
         color: colorItems.activeColor,
-        onPressed: () {},
-      ),
-    );
-  }
-
-  Center _textButtonWidget(BuildContext context) {
-    return Center(
-      child: CustomTextButton(
-        title: appStringConstants!.signInTextButton,
-        style: Theme.of(context)
-            .textTheme
-            .button
-            ?.copyWith(color: colorItems.bodyColor),
         onPressed: () {},
       ),
     );
@@ -137,7 +149,7 @@ class _SignInViewState extends State<SignInView> {
 
   CustomTitleWidget _titleWidget(BuildContext context) {
     return CustomTitleWidget(
-      title: appStringConstants!.signInTitle,
+      title: appStringConstants!.signUpTitle,
       style: Theme.of(context)
           .textTheme
           .headline4
@@ -147,17 +159,15 @@ class _SignInViewState extends State<SignInView> {
 
   SizedBox _subTitleWidget(BuildContext context) {
     return SizedBox(
-      width: context.hw245,
+      width: context.hw275,
       height: context.hw35,
       child: CustomRichText(
-        title: appStringConstants!.signInSubTitle,
-        buttonTitle: appStringConstants!.signInButtonTitle,
+        title: appStringConstants!.signUpSubTitle,
+        buttonTitle: appStringConstants!.signUpButtonTitle,
         onPressed: () {
-          Navigator.push(
-            context,
+          Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) => const SignUpView(),
-            ),
+                builder: (BuildContext context) => const SignInView()),
           );
         },
       ),

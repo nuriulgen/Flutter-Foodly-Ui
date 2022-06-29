@@ -27,9 +27,12 @@ extension ContextExtension on BuildContext {
   double get hw20 => 20;
   double get hw30 => 30;
   double get hw35 => 35;
+  double get hw45 => 45;
   double get hw50 => 50;
   double get hw70 => 70;
   double get hw100 => 100;
   double get hw245 => 245;
+  double get hw275 => 275;
+  double get hw285 => 275;
   double get hw340 => 340;
 }

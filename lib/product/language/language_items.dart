@@ -18,6 +18,16 @@ class AppStringConstants {
   final String signInTextButton = 'Forgot Password';
   final String signInFacebookButton = 'Connect With Facebook';
   final String signInGoogleButton = 'Connect With Google';
+
+  final String signUpAppBarTitle = 'Sign Up';
+  final String signUpTitle = 'Create account';
+  final String signUpSubTitle =
+      'Enter your Name, Email and Password for sign up.';
+  final String signUpButtonTitle = 'Already have an account?';
+  final String signUpNameForm = 'Full Name';
+  final String signUpElevatedButton = 'Sign Up';
+  final String signUpMessage =
+      'By Signing up you agree to our Terms Conditions & Privacy Policy.';
 }
 
 class LanguageItems {

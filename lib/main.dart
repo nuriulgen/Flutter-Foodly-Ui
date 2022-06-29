@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_foodly/ui/sign_in_view.dart';
+import 'package:flutter_foodly/ui/walk_through_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: const Color(0xFFFFFFFF),
       ),
-      home: const SignInView(),
+      home: const WalkThroughView(),
     );
   }
 }
