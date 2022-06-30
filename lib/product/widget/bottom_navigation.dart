@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../ui/authentication/forgot_password_view.dart';
 import '../../ui/authentication/reset_email_view.dart';
 import '../../ui/home/home_page_view.dart';
-import '../../ui/home/walk_through_view.dart';
+import '../../ui/home/search_view.dart';
 import '../color/color_items.dart';
 import '../language/language_items.dart';
 
@@ -20,7 +20,7 @@ class _NavigatorBarState extends State<NavigatorBar> {
   int _currentIndex = 0;
   final _pages = const [
     HomePageView(),
-    WalkThroughView(),
+    SearchView(),
     ResetEmailView(),
     ForgotPasswordView(),
   ];

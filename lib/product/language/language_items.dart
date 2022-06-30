@@ -70,6 +70,10 @@ class AppStringConstants {
   final String navigatorBarTitle2 = 'Search';
   final String navigatorBarTitle3 = 'Orders';
   final String navigatorBarTitle4 = 'Profile';
+
+  final String searchPageTitle = 'Search';
+  final String searchPageHintText = 'Search On Foodly';
+  final String searchPageTitle2 = 'Top Categories';
 }
 
 class LanguageItems {

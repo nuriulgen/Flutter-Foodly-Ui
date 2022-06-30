@@ -8,12 +8,14 @@ class CustomTextField extends StatefulWidget {
       required this.hintText,
       this.textInputType,
       this.textInputAction,
-      this.inputBorder})
+      this.inputBorder,
+      this.prefixIcon})
       : super(key: key);
   final String hintText;
   final TextInputType? textInputType;
   final TextInputAction? textInputAction;
   final InputBorder? inputBorder;
+  final Widget? prefixIcon;
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
 }
@@ -31,6 +33,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         fillColor: colorItems.inputColor,
         filled: true,
         hintText: widget.hintText,
+        prefixIcon: widget.prefixIcon,
       ),
     );
   }
