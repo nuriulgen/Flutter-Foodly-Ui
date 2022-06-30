@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../color/color_items.dart';
 
 class CustomTextField extends StatefulWidget {
-  CustomTextField(
+  const CustomTextField(
       {Key? key,
       required this.hintText,
       this.textInputType,

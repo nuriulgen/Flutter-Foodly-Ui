@@ -6,7 +6,7 @@ import '../../product/color/color_items.dart';
 import '../../product/language/language_items.dart';
 import '../../product/widget/custom_app_bar_widget.dart';
 import '../../product/widget/custom_elevated_button.dart';
-import '../../product/widget/subTitle_widget.dart';
+import '../../product/widget/subtitle_widget.dart';
 import '../../product/widget/text_field_widget.dart';
 import '../../product/widget/title_widget.dart';
 
@@ -67,7 +67,7 @@ class _SignUpViewState extends State<SignUpView> {
   Center _messageText(BuildContext context) {
     return Center(
       child: SizedBox(
-        width: context.hw285,
+        width: context.hw275,
         height: context.hw45,
         child: Text(
           appStringConstants!.signUpMessage,

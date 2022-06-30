@@ -21,20 +21,23 @@ class CustomBigCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: colorItems.whiteColor,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          SizedBox(
-            width: MediaQuery.of(context).size.width,
-            child: _imageWidget(),
-          ),
-          CustomTitleWidget(title: title),
-          _subTitleWidget(context),
-          _rowSubTitleWidget(context),
-        ],
+    return SizedBox(
+      height: 280,
+      child: Card(
+        color: colorItems.whiteColor,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              child: _imageWidget(),
+            ),
+            CustomTitleWidget(title: title),
+            _subTitleWidget(context),
+            _rowSubTitleWidget(context),
+          ],
+        ),
       ),
     );
   }

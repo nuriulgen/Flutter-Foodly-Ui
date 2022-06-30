@@ -6,8 +6,8 @@ import 'package:flutter_foodly/product/widget/title_widget.dart';
 import '../color/color_items.dart';
 import '../language/language_items.dart';
 
-class CustomCardWidget extends StatelessWidget {
-  CustomCardWidget({
+class CustomSmallCardWidget extends StatelessWidget {
+  CustomSmallCardWidget({
     Key? key,
     required this.title,
     required this.imageName,
@@ -56,7 +56,7 @@ class CustomCardWidget extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(context.hw5))),
             child: Text(
-              appStringConstants!.cardVotingButton,
+              appStringConstants!.smallCardVotingButton,
               style: Theme.of(context).textTheme.overline?.copyWith(
                     color: colorItems.whiteColor,
                     fontWeight: FontWeight.w500,
@@ -65,7 +65,7 @@ class CustomCardWidget extends StatelessWidget {
           ),
         ),
         Text(
-          appStringConstants!.cardTimeText,
+          appStringConstants!.smallCardTimeText,
           style: Theme.of(context).textTheme.caption?.copyWith(
                 color: colorItems.mainColor,
                 fontWeight: FontWeight.w500,
@@ -83,7 +83,7 @@ class CustomCardWidget extends StatelessWidget {
   }
 
   Text _subTitleWidget(BuildContext context) {
-    return Text(appStringConstants!.cardSubTitle,
+    return Text(appStringConstants!.smallCardSubTitle,
         style: Theme.of(context).textTheme.caption?.copyWith(
               color: colorItems.bodyColor,
               fontWeight: FontWeight.w500,

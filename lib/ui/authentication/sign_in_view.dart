@@ -7,9 +7,10 @@ import '../../product/language/language_items.dart';
 import '../../product/widget/custom_app_bar_widget.dart';
 import '../../product/widget/custom_elevated_button.dart';
 import '../../product/widget/custom_text_button.dart';
-import '../../product/widget/subTitle_widget.dart';
+import '../../product/widget/subtitle_widget.dart';
 import '../../product/widget/text_field_widget.dart';
 import '../../product/widget/title_widget.dart';
+import '../home/home_page_view.dart';
 import 'forgot_password_view.dart';
 
 class SignInView extends StatefulWidget {
@@ -103,7 +104,14 @@ class _SignInViewState extends State<SignInView> {
       child: CustomElevatedButton(
         title: appStringConstants!.signInAppBarTitle,
         color: colorItems.activeColor,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const HomePageView(),
+            ),
+          );
+        },
       ),
     );
   }

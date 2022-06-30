@@ -41,6 +41,30 @@ class AppStringConstants {
       'We have sent a instructions email to nuriulgen@gmail.com. ';
   final String emailResetButtonTitle = 'Having problem? ';
   final String emailElevatedButton = 'Send Again';
+
+  final String homeAppBarTitle = 'San Francisco';
+  final String homeAppBarSubTitle = 'DELIVERY TO ';
+  final String homeTextButtonTitle = 'See All';
+  final String homeTitle1 = 'Featured Partner';
+  final String homeTitle2 = 'Best Picks Restaurants by team';
+  final String homeTitle3 = 'All Restaurants';
+
+  final String smallCardSubTitle = 'Colarodo, San Francisco';
+  final String smallCardVotingButton = '4.7';
+  final String smallCardTimeText = '25min';
+  final String cardDeliveryType = 'Free Delivery';
+  final String customCardTitle1 = 'Daylight Cofee';
+  final String customCardTitle2 = 'McDonald\'s';
+
+  final String bigCardSubTitle1 = ' \$\$ • Chinese • American • Deshi food ';
+
+  final String bigCardVotingButton = '4.3';
+  final String bigCardSubTitle2 = '200+ Ratings';
+  final String bigCardTimeText = '45 min';
+  final String bigcardDeliveryType = 'Free';
+  final String bigCardTitle1 = 'McDonald\'s';
+  final String bigCardTitle2 = 'Mayfield Bakery & Cafe';
+  final String bigCardTitle3 = 'Cafe Brichor\'s';
 }
 
 class LanguageItems {
