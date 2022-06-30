@@ -5,17 +5,13 @@ import '../color/color_items.dart';
 
 class CustomListTile extends StatelessWidget {
   const CustomListTile(
-      {Key? key,
-      this.countProduct,
-      this.productName,
-      this.productFeatures,
-      this.productPrice})
+      {Key? key, this.leading, this.title, this.subTitle, this.trailing})
       : super(key: key);
 
-  final String? productName;
-  final String? productFeatures;
-  final double? productPrice;
-  final int? countProduct;
+  final String? title;
+  final String? subTitle;
+  final double? trailing;
+  final int? leading;
   @override
   Widget build(BuildContext context) {
     ColorItems colorItems = ColorItems();
@@ -42,21 +38,21 @@ class CustomListTile extends StatelessWidget {
     );
   }
 
-  Text _trailingWidget() => Text('\$$productPrice');
+  Text _trailingWidget() => Text('\$$trailing');
 
   Padding _subTitleWidget(BuildContext context) {
     return Padding(
       padding: context.paddingX2OnlyTop,
       child: SizedBox(
-        height: context.hw50,
+        height: context.hw60,
         width: context.hw200,
-        child: Text(productFeatures!),
+        child: Text(subTitle ?? ''),
       ),
     );
   }
 
   Text _titleWidget(BuildContext context, ColorItems colorItems) {
-    return Text(productName!,
+    return Text(title ?? '',
         style: Theme.of(context).textTheme.subtitle1?.copyWith(
               color: colorItems.mainColor,
               fontWeight: FontWeight.w600,
@@ -70,7 +66,7 @@ class CustomListTile extends StatelessWidget {
       child: Card(
         child: Center(
           child: Text(
-            countProduct.toString(),
+            leading.toString(),
             style: Theme.of(context)
                 .textTheme
                 .subtitle1

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../ui/authentication/forgot_password_view.dart';
-import '../../ui/authentication/reset_email_view.dart';
 import '../../ui/home/home_page_view.dart';
+import '../../ui/home/orders_view.dart';
 import '../../ui/home/search_view.dart';
 import '../color/color_items.dart';
 import '../language/language_items.dart';
@@ -21,7 +21,7 @@ class _NavigatorBarState extends State<NavigatorBar> {
   final _pages = const [
     HomePageView(),
     SearchView(),
-    ResetEmailView(),
+    OrderPageView(),
     ForgotPasswordView(),
   ];
   void onTabTapped(int index) {
@@ -53,7 +53,7 @@ class _NavigatorBarState extends State<NavigatorBar> {
               label: appStringConstants!.navigatorBarTitle2,
             ),
             BottomNavigationBarItem(
-              icon: const Icon(Icons.payment_outlined),
+              icon: const Icon(Icons.add_shopping_cart),
               label: appStringConstants!.navigatorBarTitle3,
             ),
             BottomNavigationBarItem(

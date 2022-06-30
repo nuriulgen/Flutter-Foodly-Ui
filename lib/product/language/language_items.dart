@@ -74,6 +74,18 @@ class AppStringConstants {
   final String searchPageTitle = 'Search';
   final String searchPageHintText = 'Search On Foodly';
   final String searchPageTitle2 = 'Top Categories';
+
+  final String orderAppBarTitle = 'Your Orders';
+  final String orderResturantName1 = 'Cookie Sandwich';
+  final String orderResturantName2 = 'Combo Burger';
+  final String orderResturantName3 = 'Oyster Dish';
+  final String orderResturantFeatures =
+      'Shortbread, chocolate turtle cookies, and red velvet.';
+  final String orderPageTitle1 = 'Subtotal';
+  final String orderPageTitle2 = 'Delivery';
+  final String orderPageTitle3 = 'Total';
+  final String orderPageTitle4 = 'Promo Code';
+  final String orderButton = 'CheckOut';
 }
 
 class LanguageItems {
