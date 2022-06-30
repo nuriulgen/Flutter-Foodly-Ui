@@ -86,6 +86,21 @@ class AppStringConstants {
   final String orderPageTitle3 = 'Total';
   final String orderPageTitle4 = 'Promo Code';
   final String orderButton = 'CheckOut';
+
+  final String profileTitle = 'Account Settings';
+  final String profileSubTitle =
+      'Update your settings like notifications, payments, profile edit etc.';
+  final String profileListTileTitle1 = 'Profile Information';
+  final String profileListTileTitle2 = 'Change Password';
+  final String profileListTileTitle3 = 'Payment Methods';
+  final String profileListTileTitle4 = 'Locations';
+  final String profileListTileTitle5 = 'Logout';
+  final String profileListTileSubTitle1 = 'Change your account information';
+  final String profileListTileSubTitle2 = 'Change your password';
+  final String profileListTileSubTitle3 = 'Add your credit & debit cards';
+  final String profileListTileSubTitle4 =
+      'Add or remove your delivery locations';
+  final String profileListTileSubTitle5 = 'Logout';
 }
 
 class LanguageItems {

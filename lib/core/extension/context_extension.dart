@@ -7,6 +7,7 @@ extension ContextExtension on BuildContext {
   EdgeInsets get paddingZero => EdgeInsets.zero;
   EdgeInsets get paddingGeneral => const EdgeInsets.all(10);
   EdgeInsets get padding2xGeneral => const EdgeInsets.all(20);
+  EdgeInsets get paddingX2Vertical => const EdgeInsets.symmetric(vertical: 5);
   EdgeInsets get paddingXVertical => const EdgeInsets.symmetric(vertical: 10);
   EdgeInsets get padding2xVertical => const EdgeInsets.symmetric(vertical: 20);
   EdgeInsets get paddingXHorizontal =>
@@ -44,6 +45,7 @@ extension ContextExtension on BuildContext {
   double get hw245 => 245;
   double get hw265 => 265;
   double get hw275 => 275;
+  double get hw280 => 280;
   double get hw340 => 340;
 }
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../ui/authentication/forgot_password_view.dart';
 import '../../ui/home/home_page_view.dart';
 import '../../ui/home/orders_view.dart';
+import '../../ui/home/profile_view.dart';
 import '../../ui/home/search_view.dart';
 import '../color/color_items.dart';
 import '../language/language_items.dart';
@@ -22,7 +22,7 @@ class _NavigatorBarState extends State<NavigatorBar> {
     HomePageView(),
     SearchView(),
     OrderPageView(),
-    ForgotPasswordView(),
+    ProfilPageView(),
   ];
   void onTabTapped(int index) {
     setState(() {
