@@ -4,13 +4,13 @@ import 'package:flutter_foodly/ui/authentication/sign_up_view.dart';
 
 import '../../product/color/color_items.dart';
 import '../../product/language/language_items.dart';
+import '../../product/widget/bottom_navigation.dart';
 import '../../product/widget/custom_app_bar_widget.dart';
 import '../../product/widget/custom_elevated_button.dart';
 import '../../product/widget/custom_text_button.dart';
 import '../../product/widget/subtitle_widget.dart';
 import '../../product/widget/text_field_widget.dart';
 import '../../product/widget/title_widget.dart';
-import '../home/home_page_view.dart';
 import 'forgot_password_view.dart';
 
 class SignInView extends StatefulWidget {
@@ -108,7 +108,7 @@ class _SignInViewState extends State<SignInView> {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => const HomePageView(),
+              builder: (context) => const NavigatorBar(),
             ),
           );
         },

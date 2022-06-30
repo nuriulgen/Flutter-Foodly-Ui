@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_foodly/core/extension/context_extension.dart';
 import 'package:flutter_foodly/ui/authentication/sign_in_view.dart';
 
-import '../core/constants/image/image_constants.dart';
-import '../product/color/color_items.dart';
-import '../product/language/language_items.dart';
-import '../product/widget/custom_elevated_button.dart';
+import '../../core/constants/image/image_constants.dart';
+import '../../product/color/color_items.dart';
+import '../../product/language/language_items.dart';
+import '../../product/widget/custom_elevated_button.dart';
 
 class WalkThroughView extends StatefulWidget {
   const WalkThroughView({Key? key}) : super(key: key);

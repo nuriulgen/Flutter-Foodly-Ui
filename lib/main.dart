@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_foodly/ui/walk_through_view.dart';
+import 'package:flutter_foodly/ui/home/walk_through_view.dart';
 
 void main() {
   runApp(const MyApp());

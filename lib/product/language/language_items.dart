@@ -65,6 +65,11 @@ class AppStringConstants {
   final String bigCardTitle1 = 'McDonald\'s';
   final String bigCardTitle2 = 'Mayfield Bakery & Cafe';
   final String bigCardTitle3 = 'Cafe Brichor\'s';
+
+  final String navigatorBarTitle1 = 'Home';
+  final String navigatorBarTitle2 = 'Search';
+  final String navigatorBarTitle3 = 'Orders';
+  final String navigatorBarTitle4 = 'Profile';
 }
 
 class LanguageItems {
